@@ -1,0 +1,44 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: Roboto, sans-serif;
+  text-align: center;
+  background-image: url('https://photojournal.jpl.nasa.gov/jpegMod/PIA25440_modest.jpg');
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+}
+
+body{
+  display: flex;
+  flex-direction: column;    /* Stack elements vertically */
+  justify-content: space-between; /* Push video to the bottom */
+  
+}
+
+/* Container that holds the images */
+.image-container {
+  display: flex;
+  justify-content: space-evenly; /* Spread images out horizontally */
+  align-items: center;          /* Center them vertically in the container row */
+  margin-top: 10px;            /* Space above the row of images */
+}
+
+/* Styling for each image inside .image-container */
+.image-container img {
+  width: 60%;
+  max-width: 300px;    /* constrict images */
+  height: auto;        /* Preserve aspect ratio */
+  border-radius: 10px; /* Rounded corners */
+  transition: transform 1.9s ease; /* Smooth hover effect */
+}
+
+/* Expand image when hover over it */
+.image-container img:hover {
+  transform: scale(2.1);
+}
+
+p {
+  font-family: "Roboto", sans-serif;
+  font-size: 30px;
+}
